@@ -1,6 +1,8 @@
-package com.ox.oxmusic.Contract
+package com.ox.oxmusic.contract
 
-import com.ox.oxmusic.Dto.MusicDetailDTO
+import android.widget.SeekBar
+import com.ox.oxmusic.dto.MusicDetailDTO
+import java.time.Duration
 
 interface CurrentMusicContract {
 
@@ -14,12 +16,18 @@ interface CurrentMusicContract {
     }
 
     interface View{
-        fun getDataSucceed()
+        fun getDataSucceed(musicData: MusicDetailDTO)
         fun getDataFailure(msg: String)
+        fun setPlayButton(isPlaying: Boolean)
+        fun setSeekBar(duration: Int)
+        fun setSeekBarProgress(progress: Int)
     }
 
     interface Presenter: OnFinishedListener{
         fun onStartGetData(id: String)
+        fun playMusic()
+        fun setData(musicData: MusicDetailDTO)
+        fun setSeekBar(seekbar: SeekBar)
     }
 
 }

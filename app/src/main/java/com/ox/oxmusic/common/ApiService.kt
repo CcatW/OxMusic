@@ -1,6 +1,6 @@
-package com.ox.oxmusic.Common
+package com.ox.oxmusic.common
 
-import com.ox.oxmusic.Dto.MusicDetailDTO
+import com.ox.oxmusic.dto.MusicDetailDTO
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

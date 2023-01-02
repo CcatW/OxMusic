@@ -11,7 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/action_bar_test"
@@ -56,17 +57,18 @@
             app:layout_constraintLeft_toLeftOf="@id/iv_album"
             app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
-        <ProgressBar
+        <SeekBar
             android:id="@+id/progress_song"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:background="#9F2C2C"
             app:layout_constraintTop_toBottomOf="@id/tv_singer"
             app:layout_constraintLeft_toLeftOf="@id/iv_album"
             app:layout_constraintRight_toRightOf="@id/iv_album" />
 
         <TextView
-            android:id="@+id/tv_progress_music"
+            android:id="@+id/tv_progress_music_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0:00"
@@ -80,6 +82,28 @@
             android:text="0:00"
             app:layout_constraintRight_toRightOf="@id/progress_song"
             app:layout_constraintTop_toBottomOf="@id/progress_song"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_progress_music_start"
+            app:layout_constraintRight_toRightOf="@id/tv_progress_music_finish"
+            app:layout_constraintTop_toBottomOf="@id/tv_progress_music_start">
+
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/play"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

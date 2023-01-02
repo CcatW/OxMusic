@@ -1,11 +1,12 @@
-package com.ox.oxmusic.Dto
+package com.ox.oxmusic.dto
 
 data class MusicDetailDTO(
     var code: String,
     var title: String,
     var singer: String,
     var length: String,
-    var url: String
+    var url: String,
+    var album: String
 //    var musicDetail: MusicDetail
 )
 

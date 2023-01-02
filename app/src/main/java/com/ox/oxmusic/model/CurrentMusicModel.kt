@@ -1,12 +1,11 @@
 package com.ox.oxmusic.model
 
 import android.util.Log
-import com.ox.oxmusic.Common.RetrofitSender
-import com.ox.oxmusic.Contract.CurrentMusicContract
-import com.ox.oxmusic.Dto.MusicDetailDTO
+import com.ox.oxmusic.common.RetrofitSender
+import com.ox.oxmusic.contract.CurrentMusicContract
+import com.ox.oxmusic.dto.MusicDetailDTO
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.Retrofit
 
 class CurrentMusicModel: CurrentMusicContract.Model {
     override fun getMusicData(
